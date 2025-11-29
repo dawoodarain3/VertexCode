@@ -3,6 +3,8 @@
 import { ExternalLink, Github } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import { useLanguage } from "@/lib/language-context"
+import { translations } from "@/lib/translations"
 
 const projects = [
   {
@@ -63,6 +65,8 @@ const projects = [
 
 export default function Portfolio() {
   const [isLoaded, setIsLoaded] = useState(false)
+  const { language } = useLanguage()
+  const t = translations[language]
 
   useEffect(() => {
     setIsLoaded(true)
@@ -73,8 +77,8 @@ export default function Portfolio() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold">Recent Projects</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Showcase of our latest and greatest work</p>
+          <h2 className="text-4xl md:text-5xl font-bold">{t.recentProjects}</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{t.portfolioShowcase}</p>
         </div>
 
         {/* Projects Grid */}
@@ -115,16 +119,23 @@ export default function Portfolio() {
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-xs font-semibold text-primary uppercase">{project.category}</span>
                 </div>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-orange-600 transition-colors">{project.title}</h3>
                 <p className="text-sm text-muted-foreground mb-4">{project.description}</p>
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span key={tag} className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full">
-                      {tag}
-                    </span>
-                  ))}
+                  {project.tags.map((tag, tagIndex) => {
+                    const colors = [
+                      "bg-primary/10 text-primary",
+                      "bg-emerald-500/10 text-emerald-600",
+                      "bg-orange-500/10 text-orange-600"
+                    ];
+                    return (
+                      <span key={tag} className={`text-xs px-2 py-1 ${colors[tagIndex % 3]} rounded-full`}>
+                        {tag}
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -135,9 +146,9 @@ export default function Portfolio() {
         <div className="text-center mt-16">
           <Link
             href="/portfolio"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-orange-500/50 transition-all hover:from-orange-600 hover:to-orange-700"
           >
-            View All Projects
+            {t.viewAllProjects}
             <ArrowRight size={20} />
           </Link>
         </div>

@@ -125,9 +125,9 @@ export default function AboutPage() {
       <section className="py-12 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Core Values</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">{t.ourCoreValues}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              The principles that guide everything we do
+              {t.coreValuesDesc}
             </p>
           </div>
 
@@ -182,9 +182,9 @@ export default function AboutPage() {
       <section className="py-12 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">What We Offer</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">{t.whatWeOffer}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive solutions for all your digital needs
+              {t.comprehensiveDigitalNeeds}
             </p>
           </div>
 

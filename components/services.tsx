@@ -3,7 +3,10 @@
 import { Code, Smartphone, Brain, Zap, Shield, TrendingUp } from "lucide-react"
 import Link from "next/link"
 import { useEffect, useState } from "react"
+import { useLanguage } from "@/lib/language-context"
+import { translations } from "@/lib/translations"
 
+// Service boxes - always in English (not translated)
 const services = [
   {
     id: "web",
@@ -11,7 +14,7 @@ const services = [
     description: "Modern, responsive websites built with cutting-edge technologies and optimized for performance.",
     icon: Code,
     features: ["React/Next.js", "Responsive Design", "SEO Optimized", "Fast Loading"],
-    color: "from-blue-600 to-cyan-600",
+    color: "from-blue-600 to-blue-700",
   },
   {
     id: "mobile",
@@ -19,7 +22,7 @@ const services = [
     description: "Native and cross-platform mobile applications that provide seamless user experiences.",
     icon: Smartphone,
     features: ["iOS & Android", "Cross-platform", "Native Performance", "Cloud Sync"],
-    color: "from-purple-600 to-pink-600",
+    color: "from-emerald-500 to-emerald-600",
   },
   {
     id: "ai",
@@ -27,12 +30,14 @@ const services = [
     description: "Intelligent solutions powered by AI and ML to automate and optimize your business.",
     icon: Brain,
     features: ["Custom Models", "Data Analytics", "Automation", "Predictive Analysis"],
-    color: "from-orange-600 to-red-600",
+    color: "from-orange-500 to-orange-600",
   },
 ]
 
 export default function Services() {
   const [isLoaded, setIsLoaded] = useState(false)
+  const { language } = useLanguage()
+  const t = translations[language]
 
   useEffect(() => {
     setIsLoaded(true)
@@ -43,9 +48,9 @@ export default function Services() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold">Our Services</h2>
+          <h2 className="text-4xl md:text-5xl font-bold">{t.ourServices}</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive digital solutions tailored to your business needs
+            {t.servicesComprehensive}
           </p>
         </div>
 
@@ -87,7 +92,7 @@ export default function Services() {
                   href={`/services/${service.id}`}
                   className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all"
                 >
-                  Learn More
+                  {t.learnMore}
                   <span>→</span>
                 </Link>
               </div>
@@ -98,9 +103,9 @@ export default function Services() {
         {/* Additional Services */}
         <div className="grid md:grid-cols-3 gap-8 mt-12">
           {[
-            { icon: Zap, title: "Performance Optimization", desc: "Lightning-fast applications" },
-            { icon: Shield, title: "Security First", desc: "Enterprise-grade security" },
-            { icon: TrendingUp, title: "Growth Strategy", desc: "Scalable solutions" },
+            { icon: Zap, title: t.performanceOptimization, desc: t.lightningFast },
+            { icon: Shield, title: t.securityFirst, desc: t.enterpriseSecurity },
+            { icon: TrendingUp, title: t.growthStrategy, desc: t.scalableSolutions },
           ].map((item, i) => {
             const Icon = item.icon
             return (

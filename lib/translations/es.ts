@@ -284,4 +284,57 @@ export const es = {
     cloudDevopsFooter: "Nube y DevOps",
     securityFooter: "Seguridad",
     customSoftwareFooter: "Desarrollo de Software Personalizado",
+
+    // Portfolio Page
+    ourPortfolio: "Nuestro Portafolio",
+    portfolioDesc: "Muestra de nuestro trabajo más reciente y destacado. Explore nuestros proyectos exitosos en web, móvil e IA.",
+    recentProjects: "Proyectos Recientes",
+    webDevelopment: "Desarrollo Web",
+    mobileApp: "Aplicación Móvil",
+    aiMl: "IA/ML",
+    viewProject: "Ver Proyecto",
+    viewGitHub: "Ver en GitHub",
+    readyToStartProject: "¿Listo para Comenzar tu Proyecto?",
+    letsCollaborate: "Colaboremos y demos vida a tu visión con nuestra experiencia y creatividad.",
+    getStarted: "Comenzar",
+    viewServices: "Ver Servicios",
+    portfolio: "Portafolio",
+    viewAllProjects: "Ver Todos los Proyectos",
+
+    // Home Page - Services Section
+    ourServices: "Nuestros Servicios",
+    servicesComprehensive: "Soluciones digitales integrales adaptadas a las necesidades de su negocio",
+    performanceOptimization: "Optimización de Rendimiento",
+    lightningFast: "Aplicaciones ultrarrápidas",
+    securityFirst: "Seguridad Primero",
+    enterpriseSecurity: "Seguridad de nivel empresarial",
+    growthStrategy: "Estrategia de Crecimiento",
+    scalableSolutions: "Soluciones escalables",
+    learnMore: "Saber Más",
+
+    // Home Page - Portfolio Section  
+    portfolioShowcase: "Muestra de nuestro trabajo más reciente y destacado",
+
+    // Home Page - CTA Section
+    readyToBuild: "¿Listo para Construir Algo Increíble?",
+    ctaCollaborate: "Colaboremos y transformemos tus ideas en soluciones digitales poderosas",
+
+    // About Page
+    whatWeOffer: "Lo Que Ofrecemos",
+    comprehensiveDigitalNeeds: "Soluciones integrales para todas sus necesidades digitales",
+    ourCoreValues: "Nuestros Valores Fundamentales",
+    coreValuesDesc: "Los principios que guían todo lo que hacemos",
+
+    // Blog Page
+    allArticles: "Todos los Artículos",
+    allPosts: "Todas las Publicaciones",
+    searchArticles: "Buscar artículos...",
+    featured: "Destacado",
+    readArticle: "Leer Artículo",
+    noArticlesFound: "No se encontraron artículos. Pruebe con una búsqueda o categoría diferente.",
+
+    // Contact Page
+    sendUsMessage: "Envíanos un Mensaje",
+    contactFormDesc: "Complete el formulario a continuación y nos pondremos en contacto con usted lo antes posible",
+    connectSocialMedia: "Conéctate con nosotros en las redes sociales",
 } as const

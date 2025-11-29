@@ -144,7 +144,7 @@ export default function BlogsPage() {
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground" size={20} />
               <input
                 type="text"
-                placeholder="Search articles..."
+                placeholder={t.searchArticles}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white border-2 border-border rounded-xl focus:outline-none focus:border-primary transition-all text-lg"
@@ -163,7 +163,7 @@ export default function BlogsPage() {
                       : "bg-white border-2 border-border text-foreground hover:border-primary/50"
                   }`}
                 >
-                  {category === "All" ? "All Posts" : blogCategories[category] || category}
+                  {category === "All" ? t.allPosts : blogCategories[category] || category}
                 </button>
               ))}
             </div>
@@ -184,7 +184,7 @@ export default function BlogsPage() {
                     </div>
                     <div className="absolute top-4 left-4">
                       <span className="px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-semibold border border-white/30">
-                        Featured
+                        {t.featured}
                       </span>
                     </div>
                   </div>
@@ -223,7 +223,7 @@ export default function BlogsPage() {
                         </div>
                       </div>
                       <div className="flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">
-                        <span>Read Article</span>
+                        <span>{t.readArticle}</span>
                         <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                       </div>
                     </div>
@@ -236,11 +236,11 @@ export default function BlogsPage() {
           {/* Blog Grid */}
           <div>
             <h2 className="text-3xl font-bold mb-8">
-              {selectedCategory === "All" ? "All Articles" : blogCategories[selectedCategory] || selectedCategory}
+              {selectedCategory === "All" ? t.allArticles : blogCategories[selectedCategory] || selectedCategory}
             </h2>
             {filteredBlogs.length === 0 ? (
               <div className="text-center py-16">
-                <p className="text-muted-foreground text-lg">No articles found. Try a different search or category.</p>
+                <p className="text-muted-foreground text-lg">{t.noArticlesFound}</p>
               </div>
             ) : (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

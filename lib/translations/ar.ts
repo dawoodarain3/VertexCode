@@ -283,4 +283,57 @@ export const ar = {
     cloudDevopsFooter: "السحابة و DevOps",
     securityFooter: "الأمان",
     customSoftwareFooter: "تطوير البرمجيات المخصصة",
+
+    // Portfolio Page
+    ourPortfolio: "محفظتنا",
+    portfolioDesc: "عرض لأحدث وأعظم أعمالنا. استكشف مشاريعنا الناجحة في الويب والجوال والذكاء الاصطناعي.",
+    recentProjects: "المشاريع الأخيرة",
+    webDevelopment: "تطوير الويب",
+    mobileApp: "تطبيق الجوال",
+    aiMl: "ذكاء اصطناعي/تعلم آلي",
+    viewProject: "عرض المشروع",
+    viewGitHub: "عرض على GitHub",
+    readyToStartProject: "هل أنت مستعد لبدء مشروعك؟",
+    letsCollaborate: "دعنا نتعاون ونحقق رؤيتك بخبرتنا وإبداعنا.",
+    getStarted: "ابدأ الآن",
+    viewServices: "عرض الخدمات",
+    portfolio: "المحفظة",
+    viewAllProjects: "عرض جميع المشاريع",
+
+    // Home Page - Services Section
+    ourServices: "خدماتنا",
+    servicesComprehensive: "حلول رقمية شاملة مصممة خصيصًا لاحتياجات عملك",
+    performanceOptimization: "تحسين الأداء",
+    lightningFast: "تطبيقات فائقة السرعة",
+    securityFirst: "الأمان أولاً",
+    enterpriseSecurity: "أمان على مستوى المؤسسات",
+    growthStrategy: "استراتيجية النمو",
+    scalableSolutions: "حلول قابلة للتوسع",
+    learnMore: "معرفة المزيد",
+
+    // Home Page - Portfolio Section  
+    portfolioShowcase: "عرض لأحدث وأعظم أعمالنا",
+
+    // Home Page - CTA Section
+    readyToBuild: "هل أنت مستعد لبناء شيء رائع؟",
+    ctaCollaborate: "دعنا نتعاون ونحول أفكارك إلى حلول رقمية قوية",
+
+    // About Page
+    whatWeOffer: "ما نقدمه",
+    comprehensiveDigitalNeeds: "حلول شاملة لجميع احتياجاتك الرقمية",
+    ourCoreValues: "قيمنا الأساسية",
+    coreValuesDesc: "المبادئ التي توجه كل ما نقوم به",
+
+    // Blog Page
+    allArticles: "جميع المقالات",
+    allPosts: "جميع المنشورات",
+    searchArticles: "البحث في المقالات...",
+    featured: "مميز",
+    readArticle: "اقرأ المقال",
+    noArticlesFound: "لم يتم العثور على مقالات. جرب بحثًا أو فئة مختلفة.",
+
+    // Contact Page
+    sendUsMessage: "أرسل لنا رسالة",
+    contactFormDesc: "املأ النموذج أدناه وسنعاود الاتصال بك في أقرب وقت ممكن",
+    connectSocialMedia: "تواصل معنا على وسائل التواصل الاجتماعي",
 } as const

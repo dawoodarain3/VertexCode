@@ -89,40 +89,41 @@ export default function ServicesPage() {
     setIsLoaded(true)
   }, [])
 
-  const serviceTranslations = [
+  // Service boxes - always in English (not translated)
+  const serviceData = [
     {
-      title: t.webDevelopment,
-      description: t.webDevDesc,
+      title: "Web Development",
+      description: "Modern, responsive websites built with cutting-edge technologies and optimized for performance.",
       techs: technologies.frontend,
     },
     {
-      title: t.mobileApps,
-      description: t.mobileAppsDesc,
+      title: "Mobile Apps",
+      description: "Native and cross-platform mobile applications for iOS & Android.",
       techs: technologies.mobile,
     },
     {
-      title: t.aiMl,
-      description: t.aiMlDesc,
+      title: "AI & Machine Learning",
+      description: "Intelligent solutions powered by AI and ML for automation.",
       techs: technologies.aiml,
     },
     {
-      title: t.backend,
-      description: t.backendDesc,
+      title: "Backend Development",
+      description: "Scalable server-side solutions and APIs.",
       techs: technologies.backend,
     },
     {
-      title: t.cloudDevops,
-      description: t.cloudDevopsDesc,
+      title: "Cloud & DevOps",
+      description: "Cloud infrastructure and deployment solutions.",
       techs: technologies.devops,
     },
     {
-      title: t.security,
-      description: t.securityDesc,
+      title: "Security & Optimization",
+      description: "Enterprise-grade security and performance optimization.",
       techs: ["SSL/TLS", "OWASP", "Penetration Testing", "Performance Tuning", "Load Balancing"],
     },
     {
-      title: t.customSoftware,
-      description: t.customSoftwareDesc,
+      title: "Custom Software Development",
+      description: "Bespoke solutions tailored to your specific business needs.",
       techs: ["Full-Stack Development", "Enterprise Solutions", "Legacy System Modernization", "API Integration"],
     },
   ]
@@ -143,8 +144,18 @@ export default function ServicesPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {serviceTranslations.map((service, index) => {
+            {serviceData.map((service, index) => {
               const Icon = services[index].icon
+              // Assign 2-color gradients: blue-green, green-orange, orange-blue
+              const iconColors = [
+                "from-blue-600 to-emerald-600",    // Web: blue to green
+                "from-emerald-500 to-emerald-600", // Mobile: green shades
+                "from-orange-500 to-orange-600",   // AI: orange shades
+                "from-blue-600 to-blue-700",       // Backend: blue shades
+                "from-emerald-600 to-green-600",   // Cloud: green shades
+                "from-orange-500 to-orange-600",   // Security: orange shades
+                "from-blue-600 to-emerald-600",    // Custom: blue to green
+              ]
               return (
                 <div
                   key={index}
@@ -153,7 +164,7 @@ export default function ServicesPage() {
                   }`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary via-accent to-secondary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${iconColors[index]} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg`}>
                     <Icon size={32} className="text-white" />
                   </div>
                   <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">

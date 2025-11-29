@@ -283,4 +283,57 @@ export const hi = {
     cloudDevopsFooter: "क्लाउड और DevOps",
     securityFooter: "सुरक्षा",
     customSoftwareFooter: "कस्टम सॉफ्टवेयर डिविलपमेंट",
+
+    // Portfolio Page
+    ourPortfolio: "हमारा पोर्टफोलियो",
+    portfolioDesc: "हमारे नवीनतम और महान कार्यों का प्रदर्शन। वेब, मोबाइल और AI में हमारी सफल परियोजनाओं का अन्वेषण करें।",
+    recentProjects: "हाल की परियोजनाएं",
+    webDevelopment: "वेब विकास",
+    mobileApp: "मोबाइल ऐप",
+    aiMl: "AI/ML",
+    viewProject: "प्रोजेक्ट देखें",
+    viewGitHub: "GitHub पर देखें",
+    readyToStartProject: "अपना प्रोजेक्ट शुरू करने के लिए तैयार हैं?",
+    letsCollaborate: "आइए सहयोग करें और हमारी विशेषज्ञता और रचनात्मकता के साथ आपके दृष्टिकोण को जीवन दें।",
+    getStarted: "शुरू करें",
+    viewServices: "सेवाएं देखें",
+    portfolio: "पोर्टफोलियो",
+    viewAllProjects: "सभी प्रोजेक्ट देखें",
+
+    // Home Page - Services Section
+    ourServices: "हमारी सेवाएं",
+    servicesComprehensive: "आपकी व्यावसायिक आवश्यकताओं के अनुरूप व्यापक डिजिटल समाधान",
+    performanceOptimization: "प्रदर्शन अनुकूलन",
+    lightningFast: "बिजली की तरह तेज़ अनुप्रयोग",
+    securityFirst: "सुरक्षा पहले",
+    enterpriseSecurity: "एंटरप्राइज़-ग्रेड सुरक्षा",
+    growthStrategy: "विकास रणनीति",
+    scalableSolutions: "मापनीय समाधान",
+    learnMore: "और जानें",
+
+    // Home Page - Portfolio Section  
+    portfolioShowcase: "हमारे नवीनतम और महान कार्यों का प्रदर्शन",
+
+    // Home Page - CTA Section
+    readyToBuild: "कुछ अद्भुत बनाने के लिए तैयार हैं?",
+    ctaCollaborate: "आइए सहयोग करें और आपके विचारों को शक्तिशाली डिजिटल समाधानों में बदलें",
+
+    // About Page
+    whatWeOffer: "हम क्या प्रदान करते हैं",
+    comprehensiveDigitalNeeds: "आपकी सभी डिजिटल आवश्यकताओं के लिए व्यापक समाधान",
+    ourCoreValues: "हमारे मूल मूल्य",
+    coreValuesDesc: "वे सिद्धांत जो हमारे हर काम को मार्गदर्शन करते हैं",
+
+    // Blog Page
+    allArticles: "सभी लेख",
+    allPosts: "सभी पोस्ट",
+    searchArticles: "लेख खोजें...",
+    featured: "विशेष",
+    readArticle: "लेख पढ़ें",
+    noArticlesFound: "कोई लेख नहीं मिला। कृपया एक अलग खोज या श्रेणी आज़माएं।",
+
+    // Contact Page
+    sendUsMessage: "हमें संदेश भेजें",
+    contactFormDesc: "नीचे दिया गया फॉर्म भरें और हम जल्द से जल्द आपसे संपर्क करेंगे",
+    connectSocialMedia: "सोशल मीडिया पर हमसे जुड़ें",
 } as const

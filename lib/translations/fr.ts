@@ -285,4 +285,57 @@ export const fr = {
     cloudDevopsFooter: "Cloud et DevOps",
     securityFooter: "Sécurité",
     customSoftwareFooter: "Développement de Logiciels Personnalisés",
+
+    // Portfolio Page
+    ourPortfolio: "Notre Portfolio",
+    portfolioDesc: "Vitrine de nos travaux les plus récents et les plus remarquables. Découvrez nos projets réussis dans le web, mobile et l'IA.",
+    recentProjects: "Projets Récents",
+    webDevelopment: "Développement Web",
+    mobileApp: "Application Mobile",
+    aiMl: "IA/ML",
+    viewProject: "Voir le Projet",
+    viewGitHub: "Voir sur GitHub",
+    readyToStartProject: "Prêt à Commencer Votre Projet?",
+    letsCollaborate: "Collaborons et donnons vie à votre vision avec notre expertise et créativité.",
+    getStarted: "Commencer",
+    viewServices: "Voir les Services",
+    portfolio: "Portfolio",
+    viewAllProjects: "Voir Tous les Projets",
+
+    // Home Page - Services Section
+    ourServices: "Nos Services",
+    servicesComprehensive: "Solutions numériques complètes adaptées aux besoins de votre entreprise",
+    performanceOptimization: "Optimisation des Performances",
+    lightningFast: "Applications ultra-rapides",
+    securityFirst: "Sécurité d'Abord",
+    enterpriseSecurity: "Sécurité de niveau entreprise",
+    growthStrategy: "Stratégie de Croissance",
+    scalableSolutions: "Solutions évolutives",
+    learnMore: "En Savoir Plus",
+
+    // Home Page - Portfolio Section  
+    portfolioShowcase: "Vitrine de nos travaux les plus récents et les plus remarquables",
+
+    // Home Page - CTA Section
+    readyToBuild: "Prêt à Construire Quelque Chose d'Extraordinaire?",
+    ctaCollaborate: "Collaborons et transformons vos idées en solutions numériques puissantes",
+
+    // About Page
+    whatWeOffer: "Ce Que Nous Offrons",
+    comprehensiveDigitalNeeds: "Solutions complètes pour tous vos besoins numériques",
+    ourCoreValues: "Nos Valeurs Fondamentales",
+    coreValuesDesc: "Les principes qui guident tout ce que nous faisons",
+
+    // Blog Page
+    allArticles: "Tous les Articles",
+    allPosts: "Tous les Articles",
+    searchArticles: "Rechercher des articles...",
+    featured: "En Vedette",
+    readArticle: "Lire l'Article",
+    noArticlesFound: "Aucun article trouvé. Essayez une recherche ou une catégorie différente.",
+
+    // Contact Page
+    sendUsMessage: "Envoyez-nous un Message",
+    contactFormDesc: "Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais",
+    connectSocialMedia: "Connectez-vous avec nous sur les réseaux sociaux",
 } as const

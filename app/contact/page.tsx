@@ -150,8 +150,8 @@ export default function ContactPage() {
                 isLoaded ? "animate-slideInRight" : "opacity-0"
               }`} style={{ animationDelay: "0.4s" }}>
                 <div className="mb-6">
-                  <h2 className="text-3xl font-bold mb-2">Send us a Message</h2>
-                  <p className="text-muted-foreground">Fill out the form below and we'll get back to you as soon as possible.</p>
+                  <h2 className="text-3xl font-bold mb-2">{t.sendUsMessage}</h2>
+                  <p className="text-muted-foreground">{t.contactFormDesc}</p>
                 </div>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
@@ -273,7 +273,7 @@ export default function ContactPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               {t.followUs}
             </h2>
-            <p className="text-muted-foreground mb-8">Connect with us on social media</p>
+            <p className="text-muted-foreground mb-8">{t.connectSocialMedia}</p>
             <div className="flex justify-center gap-6">
               {[
                 { icon: Github, href: "#", label: "GitHub", color: "hover:bg-slate-800 hover:text-white" },

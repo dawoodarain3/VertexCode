@@ -283,4 +283,57 @@ export const ur = {
     cloudDevopsFooter: "کلاؤڈ اور DevOps",
     securityFooter: "سیکیورٹی",
     customSoftwareFooter: "حسب ضرورت سافٹ ویئر ڈیولپمنٹ",
+
+    // Portfolio Page
+    ourPortfolio: "ہمارا پورٹ فولیو",
+    portfolioDesc: "ہمارے تازہ ترین اور بہترین کاموں کی نمائش۔ ویب، موبائل اور AI میں ہماری کامیاب منصوبوں کا جائزہ لیں۔",
+    recentProjects: "حالیہ منصوبے",
+    webDevelopment: "ویب ڈیولپمنٹ",
+    mobileApp: "موبائل ایپ",
+    aiMl: "AI/ML",
+    viewProject: "منصوبہ دیکھیں",
+    viewGitHub: "GitHub پر دیکھیں",
+    readyToStartProject: "اپنا منصوبہ شروع کرنے کے لیے تیار ہیں؟",
+    letsCollaborate: "آئیے مل کر کام کریں اور اپنی مہارت اور تخلیقی صلاحیتوں کے ساتھ آپ کے وژن کو زندگی دیں۔",
+    getStarted: "شروع کریں",
+    viewServices: "خدمات دیکھیں",
+    portfolio: "پورٹ فولیو",
+    viewAllProjects: "تمام منصوبے دیکھیں",
+
+    // Home Page - Services Section
+    ourServices: "ہماری خدمات",
+    servicesComprehensive: "آپ کی کاروباری ضروریات کے مطابق جامع ڈیجیٹل حل",
+    performanceOptimization: "کارکردگی کی بہتری",
+    lightningFast: "بجلی کی طرح تیز ایپلی کیشنز",
+    securityFirst: "سیکیورٹی پہلے",
+    enterpriseSecurity: "انٹرپرائز گریڈ سیکیورٹی",
+    growthStrategy: "ترقی کی حکمت عملی",
+    scalableSolutions: "قابل توسیع حل",
+    learnMore: "مزید جانیں",
+
+    // Home Page - Portfolio Section  
+    portfolioShowcase: "ہمارے تازہ ترین اور بہترین کاموں کی نمائش",
+
+    // Home Page - CTA Section
+    readyToBuild: "کچھ شاندار بنانے کے لیے تیار ہیں؟",
+    ctaCollaborate: "آئیے مل کر کام کریں اور آپ کے خیالات کو طاقتور ڈیجیٹل حل میں تبدیل کریں",
+
+    // About Page
+    whatWeOffer: "ہم کیا پیش کرتے ہیں",
+    comprehensiveDigitalNeeds: "آپ کی تمام ڈیجیٹل ضروریات کے لیے جامع حل",
+    ourCoreValues: "ہمارے بنیادی اقدار",
+    coreValuesDesc: "وہ اصول جو ہمارے ہر کام کی رہنمائی کرتے ہیں",
+
+    // Blog Page
+    allArticles: "تمام مضامین",
+    allPosts: "تمام پوسٹس",
+    searchArticles: "مضامین تلاش کریں...",
+    featured: "نمایاں",
+    readArticle: "مضمون پڑھیں",
+    noArticlesFound: "کوئی مضمون نہیں ملا۔ براہ کرم ایک مختلف تلاش یا زمرہ آزمائیں۔",
+
+    // Contact Page
+    sendUsMessage: "ہمیں پیغام بھیجیں",
+    contactFormDesc: "نیچے دیا گیا فارم بھریں اور ہم جلد از جلد آپ سے رابطہ کریں گے",
+    connectSocialMedia: "سوشل میڈیا پر ہم سے جڑیں",
 } as const

@@ -298,4 +298,57 @@ export const en = {
     cloudDevopsFooter: "Cloud & DevOps",
     securityFooter: "Security",
     customSoftwareFooter: "Custom Software Development",
+
+    // Portfolio Page
+    ourPortfolio: "Our Portfolio",
+    portfolioDesc: "Showcase of our latest and greatest work. Explore our successful projects across web, mobile, and AI.",
+    recentProjects: "Recent Projects",
+    webDevelopment: "Web Development",
+    mobileApp: "Mobile App",
+    aiMl: "AI/ML",
+    viewProject: "View Project",
+    viewGitHub: "View on GitHub",
+    readyToStartProject: "Ready to Start Your Project?",
+    letsCollaborate: "Let's collaborate and bring your vision to life with our expertise and creativity.",
+    getStarted: "Get Started",
+    viewServices: "View Services",
+    portfolio: "Portfolio",
+    viewAllProjects: "View All Projects",
+
+    // Home Page - Services Section
+    ourServices: "Our Services",
+    servicesComprehensive: "Comprehensive digital solutions tailored to your business needs",
+    performanceOptimization: "Performance Optimization",
+    lightningFast: "Lightning-fast applications",
+    securityFirst: "Security First",
+    enterpriseSecurity: "Enterprise-grade security",
+    growthStrategy: "Growth Strategy",
+    scalableSolutions: "Scalable solutions",
+    learnMore: "Learn More",
+
+    // Home Page - Portfolio Section  
+    portfolioShowcase: "Showcase of our latest and greatest work",
+
+    // Home Page - CTA Section
+    readyToBuild: "Ready to Build Something Amazing?",
+    ctaCollaborate: "Let's collaborate and transform your ideas into powerful digital solutions",
+
+    // About Page
+    whatWeOffer: "What We Offer",
+    comprehensiveDigitalNeeds: "Comprehensive solutions for all your digital needs",
+    ourCoreValues: "Our Core Values",
+    coreValuesDesc: "The principles that guide everything we do",
+
+    // Blog Page
+    allArticles: "All Articles",
+    allPosts: "All Posts",
+    searchArticles: "Search articles...",
+    featured: "Featured",
+    readArticle: "Read Article",
+    noArticlesFound: "No articles found. Try a different search or category.",
+
+    // Contact Page
+    sendUsMessage: "Send us a Message",
+    contactFormDesc: "Fill out the form below and we'll get back to you as soon as possible",
+    connectSocialMedia: "Connect with us on social media",
 } as const

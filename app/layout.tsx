@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { LanguageProvider } from "@/lib/language-context"
 import { BannerProvider } from "@/lib/banner-context"
+import LanguageLoader from "@/components/language-loader"
 import CookieConsent from "@/components/cookie-consent"
 import "./globals.css"
 
@@ -36,14 +37,46 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  const stored = localStorage.getItem("vertex-code-language");
+                  const lang = (stored && ["en", "es", "fr", "ur", "ar", "hi"].includes(stored)) ? stored : "en";
+                  const isRtl = ["ar", "ur"].includes(lang);
+                  document.documentElement.setAttribute("dir", isRtl ? "rtl" : "ltr");
+                  document.documentElement.setAttribute("lang", lang);
+                  document.documentElement.setAttribute("data-language-set", "true");
+                  window.__VERTEX_LANGUAGE__ = lang;
+                  if (document.body) {
+                    document.body.style.direction = isRtl ? "rtl" : "ltr";
+                  }
+                } catch (e) {
+                  document.documentElement.setAttribute("dir", "ltr");
+                  document.documentElement.setAttribute("lang", "en");
+                  document.documentElement.setAttribute("data-language-set", "true");
+                  window.__VERTEX_LANGUAGE__ = "en";
+                  if (document.body) {
+                    document.body.style.direction = "ltr";
+                  }
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className={`font-sans antialiased`} suppressHydrationWarning>
-        <LanguageProvider>
-          <BannerProvider>
-            {children}
-            <CookieConsent />
-          </BannerProvider>
-        </LanguageProvider>
+        <LanguageLoader>
+          <LanguageProvider>
+            <BannerProvider>
+              {children}
+              <CookieConsent />
+            </BannerProvider>
+          </LanguageProvider>
+        </LanguageLoader>
         <Analytics />
       </body>
     </html>
