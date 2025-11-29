@@ -3,12 +3,12 @@
 import Navigation from "@/components/navigation"
 import TopBanner from "@/components/top-banner"
 import Footer from "@/components/footer"
-import { useBanner } from "@/lib/banner-context"
 import { useLanguage } from "@/lib/language-context"
 import { translations } from "@/lib/translations"
+import { usePagePadding } from "@/hooks/use-page-padding"
 
 export default function TermsPage() {
-  const { isBannerVisible } = useBanner()
+  const paddingTop = usePagePadding()
   const { language } = useLanguage()
   const t = translations[language]
   
@@ -16,7 +16,7 @@ export default function TermsPage() {
     <main>
       <Navigation />
       <TopBanner />
-      <div className={`${isBannerVisible ? "pt-56" : "pt-40"} pb-20 px-4 transition-all duration-300`}>
+      <div className="pb-20 px-4 transition-all duration-300" style={{ paddingTop: `${paddingTop}px` }}>
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-8">{t.termsConditionsTitle}</h1>
 

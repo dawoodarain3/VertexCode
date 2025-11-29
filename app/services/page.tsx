@@ -6,8 +6,8 @@ import Footer from "@/components/footer"
 import { Code2, Smartphone, Brain, Database, Cloud, Shield, Zap, Users, BarChart3, Wrench } from "lucide-react"
 import { useEffect, useState } from "react"
 import { useLanguage } from "@/lib/language-context"
-import { useBanner } from "@/lib/banner-context"
 import { translations } from "@/lib/translations"
+import { usePagePadding } from "@/hooks/use-page-padding"
 
 const technologies = {
   frontend: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js", "Angular", "Svelte", "Astro"],
@@ -127,13 +127,13 @@ export default function ServicesPage() {
     },
   ]
 
-  const { isBannerVisible } = useBanner()
+  const paddingTop = usePagePadding()
 
   return (
     <main className={`bg-white ${isRTL ? "rtl" : "ltr"}`}>
       <Navigation />
       <TopBanner />
-      <div className={`${isBannerVisible ? "pt-56" : "pt-40"} pb-20 px-4 transition-all duration-300`}>
+      <div className="pb-20 px-4 transition-all duration-300" style={{ paddingTop: `${paddingTop}px` }}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center space-y-4 mb-16 animate-slideInUp">
             <h1 className="text-5xl md:text-6xl font-bold text-balance bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">

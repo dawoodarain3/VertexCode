@@ -7,14 +7,14 @@ import Footer from "@/components/footer"
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send, Clock, MessageSquare, Calendar, HeadphonesIcon } from "lucide-react"
 import { useState, useEffect } from "react"
 import { useLanguage } from "@/lib/language-context"
-import { useBanner } from "@/lib/banner-context"
 import { translations } from "@/lib/translations"
+import { usePagePadding } from "@/hooks/use-page-padding"
 
 export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
+  const paddingTop = usePagePadding()
   const { language } = useLanguage()
-  const { isBannerVisible } = useBanner()
   const t = translations[language]
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function ContactPage() {
       <TopBanner />
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className={`relative ${isBannerVisible ? "pt-56" : "pt-40"} pb-20 px-4 transition-all duration-300 overflow-hidden bg-white`}>
+        <section className="relative pb-20 px-4 transition-all duration-300 overflow-hidden bg-white" style={{ paddingTop: `${paddingTop}px` }}>
           
           <div className="max-w-7xl mx-auto">
             <div className={`text-center space-y-6 mb-16 ${isLoaded ? "animate-slideInUp" : "opacity-0"}`}>

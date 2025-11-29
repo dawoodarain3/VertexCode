@@ -5,14 +5,14 @@ import TopBanner from "@/components/top-banner"
 import Footer from "@/components/footer"
 import { Award, Users, Target, Zap, Code, Rocket, Shield, Heart, TrendingUp, Globe, Clock, CheckCircle2 } from "lucide-react"
 import { useEffect, useState } from "react"
-import { useBanner } from "@/lib/banner-context"
 import { useLanguage } from "@/lib/language-context"
 import { translations } from "@/lib/translations"
 import CountUp from "@/components/count-up"
+import { usePagePadding } from "@/hooks/use-page-padding"
 
 export default function AboutPage() {
   const [isLoaded, setIsLoaded] = useState(false)
-  const { isBannerVisible } = useBanner()
+  const paddingTop = usePagePadding()
   const { language } = useLanguage()
   const t = translations[language]
 
@@ -47,7 +47,7 @@ export default function AboutPage() {
       <TopBanner />
       
       {/* Hero Section */}
-      <section className={`relative ${isBannerVisible ? "pt-56" : "pt-40"} pb-12 px-4 transition-all duration-300 overflow-hidden bg-white`}>
+      <section className="relative pb-12 px-4 transition-all duration-300 overflow-hidden bg-white" style={{ paddingTop: `${paddingTop}px` }}>
         <div className="max-w-7xl mx-auto">
           <div className={`text-center space-y-6 mb-12`}>
             <h1 className="text-5xl md:text-7xl font-bold text-balance bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">

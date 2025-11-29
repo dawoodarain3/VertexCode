@@ -4,22 +4,29 @@ import Link from "next/link"
 import { ArrowRight, Code, Smartphone, Brain } from "lucide-react"
 import { useEffect, useState } from "react"
 import { useLanguage } from "@/lib/language-context"
-import { useBanner } from "@/lib/banner-context"
 import { translations } from "@/lib/translations"
 import CountUp from "@/components/count-up"
+import { usePagePadding } from "@/hooks/use-page-padding"
 
 export default function Hero() {
   const [isLoaded, setIsLoaded] = useState(false)
+  const paddingTop = usePagePadding()
   const { language, isRTL } = useLanguage()
-  const { isBannerVisible } = useBanner()
   const t = translations[language]
+  
+  useEffect(() => {
+    setIsLoaded(true)
+  }, [])
 
   useEffect(() => {
     setIsLoaded(true)
   }, [])
 
   return (
-    <section className={`relative ${isBannerVisible ? "pt-60" : "pt-44"} pb-20 px-4 overflow-hidden transition-all duration-300 bg-white ${isRTL ? "rtl" : "ltr"}`}>
+    <section 
+      className="relative pb-20 px-4 overflow-hidden transition-all duration-300 bg-white"
+      style={{ paddingTop: `${paddingTop}px` }}
+    >
 
       <div className="max-w-7xl mx-auto">
         <div className={`grid md:grid-cols-2 gap-12 items-center ${isRTL ? "text-right" : ""}`}>

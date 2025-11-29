@@ -6,9 +6,9 @@ import Footer from "@/components/footer"
 import Link from "next/link"
 import { Calendar, User, ArrowRight, Clock, TrendingUp, Search, BookOpen } from "lucide-react"
 import { useEffect, useState } from "react"
-import { useBanner } from "@/lib/banner-context"
 import { useLanguage } from "@/lib/language-context"
 import { translations } from "@/lib/translations"
+import { usePagePadding } from "@/hooks/use-page-padding"
 
 const blogs = [
   {
@@ -91,7 +91,7 @@ export default function BlogsPage() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState<string>("All")
   const [searchQuery, setSearchQuery] = useState("")
-  const { isBannerVisible } = useBanner()
+  const paddingTop = usePagePadding()
   const { language } = useLanguage()
   const t = translations[language]
 
@@ -125,7 +125,7 @@ export default function BlogsPage() {
     <main className="bg-white">
       <Navigation />
       <TopBanner />
-      <div className={`${isBannerVisible ? "pt-56" : "pt-40"} pb-20 px-4 transition-all duration-300`}>
+      <div className="pb-20 px-4 transition-all duration-300" style={{ paddingTop: `${paddingTop}px` }}>
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center space-y-6 mb-12">

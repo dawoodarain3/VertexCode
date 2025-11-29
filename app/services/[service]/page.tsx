@@ -5,9 +5,9 @@ import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import Link from "next/link"
 import { Code, Smartphone, Brain, CheckCircle } from "lucide-react"
-import { useBanner } from "@/lib/banner-context"
 import { useLanguage } from "@/lib/language-context"
 import { translations } from "@/lib/translations"
+import { usePagePadding } from "@/hooks/use-page-padding"
 
 const services = {
   web: {
@@ -83,7 +83,7 @@ const services = {
 
 export default function ServicePage({ params }: { params: { service: string } }) {
   const service = services[params.service as keyof typeof services]
-  const { isBannerVisible } = useBanner()
+  const paddingTop = usePagePadding()
   const { language } = useLanguage()
   const t = translations[language]
 
@@ -172,7 +172,7 @@ export default function ServicePage({ params }: { params: { service: string } })
       <Navigation />
       <main>
         {/* Hero */}
-        <section className={`${isBannerVisible ? "pt-56" : "pt-40"} pb-16 px-4 transition-all duration-300`}>
+        <section className="pb-16 px-4 transition-all duration-300" style={{ paddingTop: `${paddingTop}px` }}>
           <div className="max-w-7xl mx-auto">
             <div className="space-y-6 mb-12">
               <div className="inline-block">
